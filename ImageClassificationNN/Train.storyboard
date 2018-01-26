@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Train View-->
+        <scene sceneID="UXZ-ln-mDV">
+            <objects>
+                <viewController storyboardIdentifier="trainVC" id="7JH-EI-qxJ" customClass="TrainView" customModule="ImageClassificationNN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HNT-cG-Eqs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="QX5-3H-gQh">
+                                <rect key="frame" x="37.5" y="208.5" width="300" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNn-x4-A3z">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+                                        <color key="backgroundColor" red="0.54014779160000004" green="1" blue="0.3711749842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="ptX-Wx-VMi"/>
+                                            <constraint firstAttribute="height" constant="60" id="uQv-lb-Fhg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Start training on defualt dataset">
+                                            <color key="titleColor" red="0.29725844680000002" green="0.7802423731" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="trainOnDefaultDataset:" destination="7JH-EI-qxJ" eventType="touchUpInside" id="o6E-fe-UPl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nz-uM-q72">
+                                        <rect key="frame" x="0.0" y="95" width="300" height="60"/>
+                                        <color key="backgroundColor" red="0.54014779160000004" green="1" blue="0.3711749842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="RhG-gG-dAk"/>
+                                            <constraint firstAttribute="height" constant="60" id="uU5-Fh-pgL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Start training on your dataset">
+                                            <color key="titleColor" red="0.29725844680000002" green="0.7802423731" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="trainOnFullDataset:" destination="7JH-EI-qxJ" eventType="touchUpInside" id="bfY-6i-BAx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWt-0j-QsE">
+                                        <rect key="frame" x="0.0" y="190" width="300" height="60"/>
+                                        <color key="backgroundColor" red="0.54014779160000004" green="1" blue="0.3711749842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="jza-zg-CiJ"/>
+                                            <constraint firstAttribute="height" constant="60" id="ygo-jY-HO7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Create dataset">
+                                            <color key="titleColor" red="0.29725844680000002" green="0.7802423731" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createYourOwnDataset:" destination="7JH-EI-qxJ" eventType="touchUpInside" id="URy-0f-jS4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="lLv-cK-jLH"/>
+                                    <constraint firstAttribute="width" constant="300" id="muD-tK-if0"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of cycles:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lk-zv-VdQ">
+                                <rect key="frame" x="118" y="42" width="139" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="fRy-ta-vd7">
+                                <rect key="frame" x="137" y="90" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-dJ-vtV">
+                                <rect key="frame" x="17" y="20" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;Back"/>
+                                <connections>
+                                    <action selector="goBackToMainView:" destination="7JH-EI-qxJ" eventType="touchUpInside" id="mQB-CF-Xuc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QX5-3H-gQh" firstAttribute="centerY" secondItem="HNT-cG-Eqs" secondAttribute="centerY" id="3Fo-By-3VV"/>
+                            <constraint firstItem="QX5-3H-gQh" firstAttribute="centerX" secondItem="HNT-cG-Eqs" secondAttribute="centerX" id="reK-Qi-Yty"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RxN-X2-7rr"/>
+                    </view>
+                    <connections>
+                        <outlet property="numberOfEpoches" destination="fRy-ta-vd7" id="FbW-J9-U6J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lkf-T1-QGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-769" y="54"/>
+        </scene>
+    </scenes>
+</document>

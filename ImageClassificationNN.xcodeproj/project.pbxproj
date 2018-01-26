@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1984990B201236D800F7ED5E /* DataHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1984990A201236D800F7ED5E /* DataHandler.cpp */; };
+		1984990E201236E100F7ED5E /* stacktrace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1984990D201236E100F7ED5E /* stacktrace.cpp */; };
+		19849918201236F500F7ED5E /* memorySecondBackup.csv in Resources */ = {isa = PBXBuildFile; fileRef = 19849910201236F500F7ED5E /* memorySecondBackup.csv */; };
+		19849919201236F500F7ED5E /* memoryFirst.csv in Resources */ = {isa = PBXBuildFile; fileRef = 19849911201236F500F7ED5E /* memoryFirst.csv */; };
+		1984991A201236F500F7ED5E /* mnist_train_100.csv in Resources */ = {isa = PBXBuildFile; fileRef = 19849912201236F500F7ED5E /* mnist_train_100.csv */; };
+		1984991B201236F500F7ED5E /* memorySecond.csv in Resources */ = {isa = PBXBuildFile; fileRef = 19849913201236F500F7ED5E /* memorySecond.csv */; };
+		1984991C201236F500F7ED5E /* mnist_train.csv in Resources */ = {isa = PBXBuildFile; fileRef = 19849914201236F500F7ED5E /* mnist_train.csv */; };
+		1984991D201236F500F7ED5E /* memoryFirstBackup.csv in Resources */ = {isa = PBXBuildFile; fileRef = 19849915201236F500F7ED5E /* memoryFirstBackup.csv */; };
+		1984991E201236F500F7ED5E /* user_numbers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 19849916201236F500F7ED5E /* user_numbers.csv */; };
+		19849922201236FD00F7ED5E /* Memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19849920201236FD00F7ED5E /* Memory.cpp */; };
+		198499272012370C00F7ED5E /* ImageProcessing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 198499252012370C00F7ED5E /* ImageProcessing.cpp */; };
+		1984992A2012371600F7ED5E /* NN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 198499282012371600F7ED5E /* NN.cpp */; };
+		1984992D2012373C00F7ED5E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1984992C2012373C00F7ED5E /* opencv2.framework */; };
+		19849930201238F900F7ED5E /* DataFromNNHandle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1984992E201238F800F7ED5E /* DataFromNNHandle.cpp */; };
+		1984993F20123BB000F7ED5E /* NNLinker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1984993D20123BB000F7ED5E /* NNLinker.cpp */; };
+		19A7B6DA2012932C00DA7C2E /* Train.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19A7B6D92012932C00DA7C2E /* Train.storyboard */; };
+		19A7B6DF2012937500DA7C2E /* TrainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A7B6DE2012937500DA7C2E /* TrainView.swift */; };
+		19A7B6F52014D91F00DA7C2E /* CreateDataset.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19A7B6F42014D91F00DA7C2E /* CreateDataset.storyboard */; };
+		19A7B6F72014D93D00DA7C2E /* OwnDatasetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A7B6F62014D93D00DA7C2E /* OwnDatasetViewController.swift */; };
+		19A7B6F92014F19B00DA7C2E /* user_dataset.csv in Resources */ = {isa = PBXBuildFile; fileRef = 19A7B6F82014F19B00DA7C2E /* user_dataset.csv */; };
+		19B5E9681FDCA941001E6157 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B5E9671FDCA941001E6157 /* AppDelegate.swift */; };
+		19B5E96A1FDCA941001E6157 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B5E9691FDCA941001E6157 /* ViewController.swift */; };
+		19B5E96D1FDCA941001E6157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B5E96B1FDCA941001E6157 /* Main.storyboard */; };
+		19B5E96F1FDCA941001E6157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B5E96E1FDCA941001E6157 /* Assets.xcassets */; };
+		19B5E9721FDCA941001E6157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B5E9701FDCA941001E6157 /* LaunchScreen.storyboard */; };
+		19B5E97D1FDCA942001E6157 /* ImageClassificationNNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B5E97C1FDCA942001E6157 /* ImageClassificationNNTests.swift */; };
+		19B5E9881FDCA942001E6157 /* ImageClassificationNNUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B5E9871FDCA942001E6157 /* ImageClassificationNNUITests.swift */; };
+		19B5E9961FDCA970001E6157 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B5E9951FDCA970001E6157 /* DrawingView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19B5E9791FDCA942001E6157 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B5E95C1FDCA941001E6157 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19B5E9631FDCA941001E6157;
+			remoteInfo = ImageClassificationNN;
+		};
+		19B5E9841FDCA942001E6157 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B5E95C1FDCA941001E6157 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19B5E9631FDCA941001E6157;
+			remoteInfo = ImageClassificationNN;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19849908201236D800F7ED5E /* ImageClassificationNN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageClassificationNN-Bridging-Header.h"; sourceTree = "<group>"; };
+		19849909201236D800F7ED5E /* DataHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataHandler.hpp; sourceTree = "<group>"; };
+		1984990A201236D800F7ED5E /* DataHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataHandler.cpp; sourceTree = "<group>"; };
+		1984990C201236E100F7ED5E /* stacktrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stacktrace.h; sourceTree = "<group>"; };
+		1984990D201236E100F7ED5E /* stacktrace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stacktrace.cpp; sourceTree = "<group>"; };
+		1984990F201236E900F7ED5E /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		19849910201236F500F7ED5E /* memorySecondBackup.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memorySecondBackup.csv; sourceTree = "<group>"; };
+		19849911201236F500F7ED5E /* memoryFirst.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memoryFirst.csv; sourceTree = "<group>"; };
+		19849912201236F500F7ED5E /* mnist_train_100.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mnist_train_100.csv; sourceTree = "<group>"; };
+		19849913201236F500F7ED5E /* memorySecond.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memorySecond.csv; sourceTree = "<group>"; };
+		19849914201236F500F7ED5E /* mnist_train.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mnist_train.csv; sourceTree = "<group>"; };
+		19849915201236F500F7ED5E /* memoryFirstBackup.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memoryFirstBackup.csv; sourceTree = "<group>"; };
+		19849916201236F500F7ED5E /* user_numbers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = user_numbers.csv; sourceTree = "<group>"; };
+		19849920201236FD00F7ED5E /* Memory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Memory.cpp; sourceTree = "<group>"; };
+		19849921201236FD00F7ED5E /* Memory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Memory.hpp; sourceTree = "<group>"; };
+		198499232012370600F7ED5E /* Loger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Loger.h; sourceTree = "<group>"; };
+		198499242012370600F7ED5E /* IExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IExceptions.h; sourceTree = "<group>"; };
+		198499252012370C00F7ED5E /* ImageProcessing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageProcessing.cpp; sourceTree = "<group>"; };
+		198499262012370C00F7ED5E /* ImageProcessing.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ImageProcessing.hpp; sourceTree = "<group>"; };
+		198499282012371600F7ED5E /* NN.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NN.cpp; sourceTree = "<group>"; };
+		198499292012371600F7ED5E /* NN.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NN.hpp; sourceTree = "<group>"; };
+		1984992C2012373C00F7ED5E /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		1984992E201238F800F7ED5E /* DataFromNNHandle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataFromNNHandle.cpp; sourceTree = "<group>"; };
+		1984992F201238F900F7ED5E /* DataFromNNHandle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataFromNNHandle.hpp; sourceTree = "<group>"; };
+		1984993D20123BB000F7ED5E /* NNLinker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NNLinker.cpp; sourceTree = "<group>"; };
+		1984993E20123BB000F7ED5E /* NNLinker.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NNLinker.hpp; sourceTree = "<group>"; };
+		19A7B6D92012932C00DA7C2E /* Train.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Train.storyboard; sourceTree = "<group>"; };
+		19A7B6DE2012937500DA7C2E /* TrainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainView.swift; sourceTree = "<group>"; };
+		19A7B6F42014D91F00DA7C2E /* CreateDataset.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateDataset.storyboard; sourceTree = "<group>"; };
+		19A7B6F62014D93D00DA7C2E /* OwnDatasetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnDatasetViewController.swift; sourceTree = "<group>"; };
+		19A7B6F82014F19B00DA7C2E /* user_dataset.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = user_dataset.csv; sourceTree = "<group>"; };
+		19B5E9641FDCA941001E6157 /* ImageClassificationNN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageClassificationNN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B5E9671FDCA941001E6157 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19B5E9691FDCA941001E6157 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		19B5E96C1FDCA941001E6157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19B5E96E1FDCA941001E6157 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19B5E9711FDCA941001E6157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19B5E9731FDCA942001E6157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19B5E9781FDCA942001E6157 /* ImageClassificationNNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageClassificationNNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B5E97C1FDCA942001E6157 /* ImageClassificationNNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationNNTests.swift; sourceTree = "<group>"; };
+		19B5E97E1FDCA942001E6157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19B5E9831FDCA942001E6157 /* ImageClassificationNNUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageClassificationNNUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B5E9871FDCA942001E6157 /* ImageClassificationNNUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationNNUITests.swift; sourceTree = "<group>"; };
+		19B5E9891FDCA942001E6157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19B5E9951FDCA970001E6157 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19B5E9611FDCA941001E6157 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1984992D2012373C00F7ED5E /* opencv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B5E9751FDCA942001E6157 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B5E9801FDCA942001E6157 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		198498FF2012359500F7ED5E /* C++ */ = {
+			isa = PBXGroup;
+			children = (
+				1984992E201238F800F7ED5E /* DataFromNNHandle.cpp */,
+				1984992F201238F900F7ED5E /* DataFromNNHandle.hpp */,
+				1984993D20123BB000F7ED5E /* NNLinker.cpp */,
+				1984993E20123BB000F7ED5E /* NNLinker.hpp */,
+				19849908201236D800F7ED5E /* ImageClassificationNN-Bridging-Header.h */,
+				198499062012361600F7ED5E /* DataHandler */,
+				19849905201235FF00F7ED5E /* StackTrace */,
+				19849904201235EC00F7ED5E /* Matrix */,
+				19849903201235C800F7ED5E /* Data */,
+				19849902201235BD00F7ED5E /* IExceptions */,
+				19849901201235B000F7ED5E /* ImageProcessing */,
+				198499002012359D00F7ED5E /* NeuralNetwork */,
+			);
+			path = "C++";
+			sourceTree = "<group>";
+		};
+		198499002012359D00F7ED5E /* NeuralNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				198499282012371600F7ED5E /* NN.cpp */,
+				198499292012371600F7ED5E /* NN.hpp */,
+			);
+			path = NeuralNetwork;
+			sourceTree = "<group>";
+		};
+		19849901201235B000F7ED5E /* ImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				198499252012370C00F7ED5E /* ImageProcessing.cpp */,
+				198499262012370C00F7ED5E /* ImageProcessing.hpp */,
+			);
+			path = ImageProcessing;
+			sourceTree = "<group>";
+		};
+		19849902201235BD00F7ED5E /* IExceptions */ = {
+			isa = PBXGroup;
+			children = (
+				198499242012370600F7ED5E /* IExceptions.h */,
+				198499232012370600F7ED5E /* Loger.h */,
+			);
+			path = IExceptions;
+			sourceTree = "<group>";
+		};
+		19849903201235C800F7ED5E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				19A7B6F82014F19B00DA7C2E /* user_dataset.csv */,
+				19849911201236F500F7ED5E /* memoryFirst.csv */,
+				19849915201236F500F7ED5E /* memoryFirstBackup.csv */,
+				19849913201236F500F7ED5E /* memorySecond.csv */,
+				19849910201236F500F7ED5E /* memorySecondBackup.csv */,
+				19849912201236F500F7ED5E /* mnist_train_100.csv */,
+				19849914201236F500F7ED5E /* mnist_train.csv */,
+				19849916201236F500F7ED5E /* user_numbers.csv */,
+				198499072012365A00F7ED5E /* MemoryControll */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		19849904201235EC00F7ED5E /* Matrix */ = {
+			isa = PBXGroup;
+			children = (
+				1984990F201236E900F7ED5E /* Matrix.h */,
+			);
+			path = Matrix;
+			sourceTree = "<group>";
+		};
+		19849905201235FF00F7ED5E /* StackTrace */ = {
+			isa = PBXGroup;
+			children = (
+				1984990D201236E100F7ED5E /* stacktrace.cpp */,
+				1984990C201236E100F7ED5E /* stacktrace.h */,
+			);
+			path = StackTrace;
+			sourceTree = "<group>";
+		};
+		198499062012361600F7ED5E /* DataHandler */ = {
+			isa = PBXGroup;
+			children = (
+				1984990A201236D800F7ED5E /* DataHandler.cpp */,
+				19849909201236D800F7ED5E /* DataHandler.hpp */,
+			);
+			path = DataHandler;
+			sourceTree = "<group>";
+		};
+		198499072012365A00F7ED5E /* MemoryControll */ = {
+			isa = PBXGroup;
+			children = (
+				19849920201236FD00F7ED5E /* Memory.cpp */,
+				19849921201236FD00F7ED5E /* Memory.hpp */,
+			);
+			path = MemoryControll;
+			sourceTree = "<group>";
+		};
+		1984992B2012372B00F7ED5E /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				1984992C2012373C00F7ED5E /* opencv2.framework */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		19A2B4AD20040F8200E27F84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19B5E95B1FDCA941001E6157 = {
+			isa = PBXGroup;
+			children = (
+				1984992B2012372B00F7ED5E /* Dependencies */,
+				198498FF2012359500F7ED5E /* C++ */,
+				19B5E9661FDCA941001E6157 /* ImageClassificationNN */,
+				19B5E97B1FDCA942001E6157 /* ImageClassificationNNTests */,
+				19B5E9861FDCA942001E6157 /* ImageClassificationNNUITests */,
+				19B5E9651FDCA941001E6157 /* Products */,
+				19A2B4AD20040F8200E27F84 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		19B5E9651FDCA941001E6157 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B5E9641FDCA941001E6157 /* ImageClassificationNN.app */,
+				19B5E9781FDCA942001E6157 /* ImageClassificationNNTests.xctest */,
+				19B5E9831FDCA942001E6157 /* ImageClassificationNNUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19B5E9661FDCA941001E6157 /* ImageClassificationNN */ = {
+			isa = PBXGroup;
+			children = (
+				19B5E9671FDCA941001E6157 /* AppDelegate.swift */,
+				19B5E9691FDCA941001E6157 /* ViewController.swift */,
+				19A7B6DE2012937500DA7C2E /* TrainView.swift */,
+				19A7B6F62014D93D00DA7C2E /* OwnDatasetViewController.swift */,
+				19B5E9951FDCA970001E6157 /* DrawingView.swift */,
+				19B5E96B1FDCA941001E6157 /* Main.storyboard */,
+				19A7B6F42014D91F00DA7C2E /* CreateDataset.storyboard */,
+				19A7B6D92012932C00DA7C2E /* Train.storyboard */,
+				19B5E96E1FDCA941001E6157 /* Assets.xcassets */,
+				19B5E9701FDCA941001E6157 /* LaunchScreen.storyboard */,
+				19B5E9731FDCA942001E6157 /* Info.plist */,
+			);
+			path = ImageClassificationNN;
+			sourceTree = "<group>";
+		};
+		19B5E97B1FDCA942001E6157 /* ImageClassificationNNTests */ = {
+			isa = PBXGroup;
+			children = (
+				19B5E97C1FDCA942001E6157 /* ImageClassificationNNTests.swift */,
+				19B5E97E1FDCA942001E6157 /* Info.plist */,
+			);
+			path = ImageClassificationNNTests;
+			sourceTree = "<group>";
+		};
+		19B5E9861FDCA942001E6157 /* ImageClassificationNNUITests */ = {
+			isa = PBXGroup;
+			children = (
+				19B5E9871FDCA942001E6157 /* ImageClassificationNNUITests.swift */,
+				19B5E9891FDCA942001E6157 /* Info.plist */,
+			);
+			path = ImageClassificationNNUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19B5E9631FDCA941001E6157 /* ImageClassificationNN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19B5E98C1FDCA942001E6157 /* Build configuration list for PBXNativeTarget "ImageClassificationNN" */;
+			buildPhases = (
+				19B5E9601FDCA941001E6157 /* Sources */,
+				19B5E9611FDCA941001E6157 /* Frameworks */,
+				19B5E9621FDCA941001E6157 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageClassificationNN;
+			productName = ImageClassificationNN;
+			productReference = 19B5E9641FDCA941001E6157 /* ImageClassificationNN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19B5E9771FDCA942001E6157 /* ImageClassificationNNTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19B5E98F1FDCA942001E6157 /* Build configuration list for PBXNativeTarget "ImageClassificationNNTests" */;
+			buildPhases = (
+				19B5E9741FDCA942001E6157 /* Sources */,
+				19B5E9751FDCA942001E6157 /* Frameworks */,
+				19B5E9761FDCA942001E6157 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19B5E97A1FDCA942001E6157 /* PBXTargetDependency */,
+			);
+			name = ImageClassificationNNTests;
+			productName = ImageClassificationNNTests;
+			productReference = 19B5E9781FDCA942001E6157 /* ImageClassificationNNTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19B5E9821FDCA942001E6157 /* ImageClassificationNNUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19B5E9921FDCA942001E6157 /* Build configuration list for PBXNativeTarget "ImageClassificationNNUITests" */;
+			buildPhases = (
+				19B5E97F1FDCA942001E6157 /* Sources */,
+				19B5E9801FDCA942001E6157 /* Frameworks */,
+				19B5E9811FDCA942001E6157 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19B5E9851FDCA942001E6157 /* PBXTargetDependency */,
+			);
+			name = ImageClassificationNNUITests;
+			productName = ImageClassificationNNUITests;
+			productReference = 19B5E9831FDCA942001E6157 /* ImageClassificationNNUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19B5E95C1FDCA941001E6157 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Daniel Solovich";
+				TargetAttributes = {
+					19B5E9631FDCA941001E6157 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					19B5E9771FDCA942001E6157 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 19B5E9631FDCA941001E6157;
+					};
+					19B5E9821FDCA942001E6157 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 19B5E9631FDCA941001E6157;
+					};
+				};
+			};
+			buildConfigurationList = 19B5E95F1FDCA941001E6157 /* Build configuration list for PBXProject "ImageClassificationNN" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19B5E95B1FDCA941001E6157;
+			productRefGroup = 19B5E9651FDCA941001E6157 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19B5E9631FDCA941001E6157 /* ImageClassificationNN */,
+				19B5E9771FDCA942001E6157 /* ImageClassificationNNTests */,
+				19B5E9821FDCA942001E6157 /* ImageClassificationNNUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19B5E9621FDCA941001E6157 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1984991E201236F500F7ED5E /* user_numbers.csv in Resources */,
+				19B5E9721FDCA941001E6157 /* LaunchScreen.storyboard in Resources */,
+				19A7B6F52014D91F00DA7C2E /* CreateDataset.storyboard in Resources */,
+				1984991C201236F500F7ED5E /* mnist_train.csv in Resources */,
+				1984991B201236F500F7ED5E /* memorySecond.csv in Resources */,
+				19B5E96F1FDCA941001E6157 /* Assets.xcassets in Resources */,
+				19B5E96D1FDCA941001E6157 /* Main.storyboard in Resources */,
+				1984991A201236F500F7ED5E /* mnist_train_100.csv in Resources */,
+				1984991D201236F500F7ED5E /* memoryFirstBackup.csv in Resources */,
+				19A7B6F92014F19B00DA7C2E /* user_dataset.csv in Resources */,
+				19A7B6DA2012932C00DA7C2E /* Train.storyboard in Resources */,
+				19849919201236F500F7ED5E /* memoryFirst.csv in Resources */,
+				19849918201236F500F7ED5E /* memorySecondBackup.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B5E9761FDCA942001E6157 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B5E9811FDCA942001E6157 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19B5E9601FDCA941001E6157 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19849922201236FD00F7ED5E /* Memory.cpp in Sources */,
+				19A7B6DF2012937500DA7C2E /* TrainView.swift in Sources */,
+				1984990B201236D800F7ED5E /* DataHandler.cpp in Sources */,
+				19B5E9961FDCA970001E6157 /* DrawingView.swift in Sources */,
+				19849930201238F900F7ED5E /* DataFromNNHandle.cpp in Sources */,
+				1984992A2012371600F7ED5E /* NN.cpp in Sources */,
+				19B5E96A1FDCA941001E6157 /* ViewController.swift in Sources */,
+				1984993F20123BB000F7ED5E /* NNLinker.cpp in Sources */,
+				198499272012370C00F7ED5E /* ImageProcessing.cpp in Sources */,
+				1984990E201236E100F7ED5E /* stacktrace.cpp in Sources */,
+				19A7B6F72014D93D00DA7C2E /* OwnDatasetViewController.swift in Sources */,
+				19B5E9681FDCA941001E6157 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B5E9741FDCA942001E6157 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19B5E97D1FDCA942001E6157 /* ImageClassificationNNTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B5E97F1FDCA942001E6157 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19B5E9881FDCA942001E6157 /* ImageClassificationNNUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19B5E97A1FDCA942001E6157 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19B5E9631FDCA941001E6157 /* ImageClassificationNN */;
+			targetProxy = 19B5E9791FDCA942001E6157 /* PBXContainerItemProxy */;
+		};
+		19B5E9851FDCA942001E6157 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19B5E9631FDCA941001E6157 /* ImageClassificationNN */;
+			targetProxy = 19B5E9841FDCA942001E6157 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		19B5E96B1FDCA941001E6157 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19B5E96C1FDCA941001E6157 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19B5E9701FDCA941001E6157 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19B5E9711FDCA941001E6157 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19B5E98A1FDCA942001E6157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				NEW_SETTING = "";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19B5E98B1FDCA942001E6157 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				NEW_SETTING = "";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19B5E98D1FDCA942001E6157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = YES;
+				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Dependencies";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = ImageClassificationNN/Info.plist;
+				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/libopencv_optflow.3.4.dylib";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "Daniel-Solovich.ImageClassificationNN";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "C++/ImageClassificationNN-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19B5E98E1FDCA942001E6157 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = YES;
+				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Dependencies";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = ImageClassificationNN/Info.plist;
+				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/libopencv_optflow.3.4.dylib";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "Daniel-Solovich.ImageClassificationNN";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "C++/ImageClassificationNN-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		19B5E9901FDCA942001E6157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageClassificationNNTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Daniel-Solovich.ImageClassificationNNTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageClassificationNN.app/ImageClassificationNN";
+			};
+			name = Debug;
+		};
+		19B5E9911FDCA942001E6157 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageClassificationNNTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Daniel-Solovich.ImageClassificationNNTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageClassificationNN.app/ImageClassificationNN";
+			};
+			name = Release;
+		};
+		19B5E9931FDCA942001E6157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageClassificationNNUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Daniel-Solovich.ImageClassificationNNUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageClassificationNN;
+			};
+			name = Debug;
+		};
+		19B5E9941FDCA942001E6157 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageClassificationNNUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Daniel-Solovich.ImageClassificationNNUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageClassificationNN;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19B5E95F1FDCA941001E6157 /* Build configuration list for PBXProject "ImageClassificationNN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B5E98A1FDCA942001E6157 /* Debug */,
+				19B5E98B1FDCA942001E6157 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19B5E98C1FDCA942001E6157 /* Build configuration list for PBXNativeTarget "ImageClassificationNN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B5E98D1FDCA942001E6157 /* Debug */,
+				19B5E98E1FDCA942001E6157 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19B5E98F1FDCA942001E6157 /* Build configuration list for PBXNativeTarget "ImageClassificationNNTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B5E9901FDCA942001E6157 /* Debug */,
+				19B5E9911FDCA942001E6157 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19B5E9921FDCA942001E6157 /* Build configuration list for PBXNativeTarget "ImageClassificationNNUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B5E9931FDCA942001E6157 /* Debug */,
+				19B5E9941FDCA942001E6157 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19B5E95C1FDCA941001E6157 /* Project object */;
+}
