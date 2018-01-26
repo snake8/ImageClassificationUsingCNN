@@ -24,9 +24,20 @@ void trainOnDefault(unsigned int nepoches)
     
     std::thread* threads = new std::thread[3];
     
-    threads[0] = std::thread(&trainNetwork, &nn, nepoches / 3, pathToData);
-    threads[1] = std::thread(&trainNetwork, &nn, nepoches / 3, pathToData);
-    threads[2] = std::thread(&trainNetwork, &nn, nepoches / 3, pathToData);
+    threads[0] = std::thread(&trainNetwork,
+                             &nn,
+                             nepoches / 3,
+                             pathToData);
+    
+    threads[1] = std::thread(&trainNetwork,
+                             &nn,
+                             nepoches / 3,
+                             pathToData);
+    
+    threads[2] = std::thread(&trainNetwork,
+                             &nn,
+                             nepoches / 3,
+                             pathToData);
 
     if (threads[0].joinable() &&
         threads[1].joinable() &&
@@ -48,9 +59,20 @@ void trainOnUserDataset(unsigned int nepoches)
     
     std::thread* threads = new std::thread[3];
     
-    threads[0] = std::thread(&trainNetwork, &nn, nepoches / 3, pathToData);
-    threads[1] = std::thread(&trainNetwork, &nn, nepoches / 3, pathToData);
-    threads[2] = std::thread(&trainNetwork, &nn, nepoches / 3, pathToData);
+    threads[0] = std::thread(&trainNetwork,
+                             &nn,
+                             nepoches / 3,
+                             pathToData);
+    
+    threads[1] = std::thread(&trainNetwork,
+                             &nn,
+                             nepoches / 3,
+                             pathToData);
+    
+    threads[2] = std::thread(&trainNetwork,
+                             &nn,
+                             nepoches / 3,
+                             pathToData);
     
     if (threads[0].joinable() &&
         threads[1].joinable() &&

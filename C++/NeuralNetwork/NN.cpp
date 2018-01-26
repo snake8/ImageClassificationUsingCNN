@@ -10,8 +10,13 @@ NeuralNetwork::NeuralNetwork(const size_t input, const size_t hidden, const size
         {
             wih.resizeMatrix(hiddenNeurons, inputNeurons);
             who.resizeMatrix(outputNeurons, hiddenNeurons);
-            Matrix<double>::generateRandomMatrixFromMatrix(wih, (double)-pow(hiddenNeurons, -.5), (double)pow(hiddenNeurons, -.5));
-            Matrix<double>::generateRandomMatrixFromMatrix(who, (double)-pow(hiddenNeurons, -.5), (double)pow(hiddenNeurons, -.5));
+            
+            Matrix<double>::generateRandomMatrixFromMatrix(wih,
+                                                           (double)-pow(hiddenNeurons, -.5),
+                                                           (double)pow(hiddenNeurons, -.5));
+            Matrix<double>::generateRandomMatrixFromMatrix(who,
+                                                           (double)-pow(hiddenNeurons, -.5),
+                                                           (double)pow(hiddenNeurons, -.5));
         }
     }
 
@@ -32,13 +37,27 @@ Weights NeuralNetwork::train(Matrix<double> &inputs, Matrix<double> &targets)
     
     
     // updating weights
-    updateWeight(who, t_hiddenOutputs, outputs.finalOutputs, outputError,lr);
-    updateWeight(wih, inputs, outputs.hiddenOutputs, hiddenError, lr);
+    updateWeight(who,
+                 t_hiddenOutputs,
+                 outputs.finalOutputs,
+                 outputError,
+                 lr);
+    
+    updateWeight(wih,
+                 inputs,
+                 outputs.hiddenOutputs,
+                 hiddenError,
+                 lr);
+    
     return Weights { wih, who };
 }
 
 
-void NeuralNetwork::updateWeight(Matrix<double>& weight, Matrix<double>& input, Matrix<double>& output, Matrix<double>& error, const float lr)
+void NeuralNetwork::updateWeight(Matrix<double>& weight,
+                                 Matrix<double>& input,
+                                 Matrix<double>& output,
+                                 Matrix<double>& error,
+                                 const float lr)
 {
     Matrix<double> outputError, dotProduct1;
     try
@@ -52,11 +71,17 @@ void NeuralNetwork::updateWeight(Matrix<double>& weight, Matrix<double>& input, 
         std::cout << e.getError() << std::endl;
         exit(1);
     }
+    
     Matrix<double> updateFor  = Matrix<double>::getdot(dotProduct1, input);
-    for (size_t i = 0; i < weight.size1(); i++)
+    
+    for (size_t rows = 0;
+         rows < weight.size1();
+         rows++)
     {
-        for (size_t j = 0; j < weight.size2(); j++)
-            weight(i, j) += lr * updateFor(i, j);
+        for (size_t cols = 0;
+             cols < weight.size2();
+             cols++)
+            weight(rows, cols) += lr * updateFor(rows, cols);
     }
 }
 
@@ -65,14 +90,14 @@ Matrix<double> NeuralNetwork::addMatrices(Matrix<double>& mat1, Matrix<double> m
     if (mat1 == mat2)
     {
         Matrix<double> multResult = {mat1.size1(), mat2.size2()};
-        for (size_t i = 0;
-             i < mat1.size1();
-             i++)
+        for (size_t rows = 0;
+             rows < mat1.size1();
+             rows++)
         {
-            for (size_t j = 0;
-                 j < mat1.size2();
-                  j++)
-                multResult(i, j) = mat1(i, j) * mat2(i, j);
+            for (size_t cols = 0;
+                 cols < mat1.size2();
+                  cols++)
+                multResult(rows, cols) = mat1(rows, cols) * mat2(rows, cols);
         }
         return multResult;
     }
@@ -100,14 +125,14 @@ Outputs NeuralNetwork::calculateOutputs(Matrix<double> &inputs)
 Matrix<double> NeuralNetwork::sigmoidFunction(Matrix<double>& mat)
 {
     Matrix<double> sigMat = Matrix<double>(mat.size1(), mat.size2());
-    for (size_t col = 0;
-         col < mat.size1();
-         col++)
+    for (size_t rows = 0;
+         rows < mat.size1();
+         rows++)
     {
-        for (size_t str = 0;
-             str < mat.size2();
-             str++)
-            sigMat(col, str) = 1 / (1 + exp(-mat(col, str)));
+        for (size_t cols = 0;
+             cols < mat.size2();
+             cols++)
+            sigMat(rows, cols) = 1 / (1 + exp(-mat(rows, cols)));
     }
     return sigMat;
 }

@@ -39,7 +39,9 @@ void trainNetwork(NeuralNetwork* nn, unsigned int epoches, std::string pathToTra
     Matrix<double> allTrainData = FileProcessing::readDataFromFile(pathToTrainData.c_str()), targets(10, 1);
     targets = .01;
     Weights weights;
-    for (unsigned int i = 0; i < epoches; i++)
+    for (unsigned int i = 0;
+         i < epoches;
+         i++)
     {
         mtx.lock();
         std::cout << "--------------------------------------------------------" << std::endl;

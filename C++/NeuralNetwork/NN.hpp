@@ -38,14 +38,8 @@ class NeuralNetwork
 private:
     const size_t inputNeurons, hiddenNeurons, outputNeurons;
     const float lr;
-    
-    
-    // + 1 is a bias
-    Matrix<double> wih = {hiddenNeurons, inputNeurons + 1};
-    Matrix<double> who = {outputNeurons, hiddenNeurons + 1};
-    
-    Matrix<double> bias_h = Matrix<double>(hiddenNeurons, 1);
-    Matrix<double> bias_o = Matrix<double>(outputNeurons, 1);
+    Matrix<double> wih = {hiddenNeurons, outputNeurons};
+    Matrix<double> who = {outputNeurons, hiddenNeurons}; 
 private:
     static Matrix<double> sigmoidFunction(Matrix<double>& matrix);
     static void updateWeight(Matrix<double>&, Matrix<double>&, Matrix<double>&, Matrix<double>&, const float);
