@@ -132,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				1984992E201238F800F7ED5E /* DataFromNNHandle.cpp */,
-				1984992F201238F900F7ED5E /* DataFromNNHandle.hpp */,
 				1984993D20123BB000F7ED5E /* NNLinker.cpp */,
+				1984992F201238F900F7ED5E /* DataFromNNHandle.hpp */,
 				1984993E20123BB000F7ED5E /* NNLinker.hpp */,
 				19849908201236D800F7ED5E /* ImageClassificationNN-Bridging-Header.h */,
 				198499062012361600F7ED5E /* DataHandler */,

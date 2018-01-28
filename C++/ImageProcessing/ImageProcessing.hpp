@@ -18,7 +18,8 @@
 #include <opencv2/opencv.hpp>
 
 
-class ImageProcessing {
+class ImageProcessing
+{
 private:
     const cv::String m_path;
     cv::Mat m_image;

@@ -14,14 +14,14 @@
 static std::mutex mtx;
 
 
-static Matrix<double>* scaleMatrixForTrainingOnDefaultDataset(Matrix<double>& matrixForScaling, size_t row)
+static Matrix<double> scaleMatrixForTrainingOnDefaultDataset(Matrix<double>& matrixForScaling, size_t row)
 {
-    Matrix<double>* scaledMatrix = new Matrix<double>(1, matrixForScaling.size2());
-    for (size_t i = 0;
-         i < matrixForScaling.size2();
-         i++)
-        (*scaledMatrix)(0, i) = (matrixForScaling(row, i) / 255.0 * .99) + .01;
-    scaledMatrix->removeRow(0);
+    Matrix<double> scaledMatrix(1, matrixForScaling.size2());
+    for (size_t cols = 0;
+         cols < matrixForScaling.size2();
+         ++cols)
+        scaledMatrix(0, cols) = (matrixForScaling(row, cols) / 255.0 * .99) + .01;
+    scaledMatrix.removeRow(0); 
     return scaledMatrix;
 }
 
@@ -34,14 +34,14 @@ static void saveWeights(Weights& weights)
 }
 
 
-void trainNetwork(NeuralNetwork* nn, unsigned int epoches, std::string pathToTrainData)
+void trainNetwork(NeuralNetwork* const nn, unsigned int epoches, std::string pathToTrainData)
 {
     Matrix<double> allTrainData = FileProcessing::readDataFromFile(pathToTrainData.c_str()), targets(10, 1);
     targets = .01;
     Weights weights;
     for (unsigned int i = 0;
          i < epoches;
-         i++)
+         ++i)
     {
         mtx.lock();
         std::cout << "--------------------------------------------------------" << std::endl;
@@ -51,12 +51,11 @@ void trainNetwork(NeuralNetwork* nn, unsigned int epoches, std::string pathToTra
         mtx.unlock();
         for (size_t j = 0;
              j < allTrainData.size1();
-             j++)
+             ++j)
         {
             targets(allTrainData(j, 0), 0) = .99;
-            Matrix<double>* trainInputs = scaleMatrixForTrainingOnDefaultDataset(allTrainData, j);
-            weights = nn->train(*trainInputs, targets);
-            delete trainInputs;
+            Matrix<double> trainInputs = scaleMatrixForTrainingOnDefaultDataset(allTrainData, j);
+            weights = nn->train(trainInputs, targets);
         }
         
         mtx.lock();
@@ -84,11 +83,11 @@ static void scaleDataFromImage(Matrix<double>* const dataFromImage)
 {
     for (size_t i = 0;
          i < dataFromImage->size1();
-         i++)
+         ++i)
     {
         for (size_t j = 0;
              j < dataFromImage->size2();
-             j++)
+             ++j)
             (*dataFromImage)(i, j) = (*dataFromImage)(i, j) / 255.0 * .99 + .01;
     }
 }

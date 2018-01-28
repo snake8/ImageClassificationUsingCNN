@@ -20,10 +20,14 @@ void FileProcessing::writeDataInFile(Matrix<double>* mat, const char* path, bool
             file = std::ofstream(path);
         if (file.is_open()) 
         {
-            for (size_t i = 0; i < mat->size1(); i++) 
+            for (size_t i = 0;
+                 i < mat->size1();
+                 i++)
             {
                 std::string line; 
-                for (size_t j = 0; j < mat->size2(); j++) 
+                for (size_t j = 0;
+                     j < mat->size2();
+                     j++)
                 {
                     auto charInData = std::to_string((*mat)(i, j)); 
                     line += !j ? charInData : "," + charInData;
@@ -69,14 +73,20 @@ Matrix<double> FileProcessing::readDataFromFile(const char* path)
             }
             file.close();
         } else
-            throw FileNotFoundException();        
+            throw FileNotFoundException();
+        
         if (!vec.size())
             return matrixWithData;
+        
         matrixWithData.resizeMatrix(vec.size(), vec[0].size());
-        for (size_t i = 0; i < matrixWithData.size1(); i++)
+        for (size_t rows = 0;
+             rows < matrixWithData.size1();
+             rows++)
         {
-            for (size_t j = 0; j < matrixWithData.size2(); j++)
-                matrixWithData(i, j) = vec[i][j];
+            for (size_t cols = 0;
+                 cols < matrixWithData.size2();
+                 cols++)
+                matrixWithData(rows, cols) = vec[rows][cols];
         }
         return matrixWithData;
     }

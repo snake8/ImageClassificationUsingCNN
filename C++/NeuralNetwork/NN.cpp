@@ -1,6 +1,9 @@
 #include "NN.hpp"
 
 
+
+
+
 NeuralNetwork::NeuralNetwork(const size_t input, const size_t hidden, const size_t output, const float lr) :
     inputNeurons(input), hiddenNeurons(hidden), outputNeurons(output), lr(lr)
     {
@@ -27,6 +30,7 @@ NeuralNetwork::~NeuralNetwork()
 
 Weights NeuralNetwork::train(Matrix<double> &inputs, Matrix<double> &targets)
 {
+    
     Outputs outputs = calculateOutputs(inputs);
     
     // Calculatign errors
